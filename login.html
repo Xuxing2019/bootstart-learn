@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Floating labels example · Bootstrap</title>
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./css/floating-labels.css" rel="stylesheet">
+</head>
+<body>
+<form class="form-signin rounded-sm">
+    <div class="text-center mb-4">
+        <img class="mb-4" src="./images/logo2.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">宠物云后台管理系统</h1>
+    </div>
+
+    <div class="form-label-group">
+        <input type="text" id="username" class="form-control" placeholder="账号" required autofocus>
+        <label for="username">账号</label>
+    </div>
+
+    <div class="form-label-group">
+        <input type="password" id="password" class="form-control" placeholder="密码">
+        <label for="password">密码</label>
+    </div>
+
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> 记住我
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">登 录</button>
+<!--    <p class="mt-5 mb-3 text-muted text-center">&copy; 2017-2020</p>-->
+</form>
+<script type="application/javascript" src="./js/jquery-3.5.1.min.js"></script>
+<script type="application/javascript" src="./js/bootstrap.min.js"></script>
+<script>
+    (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+            // 获取表单对象
+            var forms = document.getElementsByClassName('form-signin');
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                    if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                    }
+                    form.classList.add('was-validated');
+                }, false);
+            });
+        }, false);
+    })();
+</script>
+</body>
+</html>
